@@ -9,7 +9,7 @@ function Introduction(){
         <section id="app-introduction" className={`${inconsolata.className}`} >  
         
            <h1 className={`header  ${recoleta_regular.className}`} >  
-             {" Explore Top Music Powered by your Listening habbits "}
+             {" Explore Top Music Powered by your Listening habits "}
            </h1> 
            <p className="" > 
              {" We bring together your favourite music services and join up listening, watching and sharing to connect your musical world." }
