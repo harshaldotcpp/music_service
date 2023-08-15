@@ -21,7 +21,7 @@ function Introduction(){
            
            <div className="underline" >
             <a href="#signin">
-                Get Started
+                Get Started ↓
             </a>
            </div> 
            
