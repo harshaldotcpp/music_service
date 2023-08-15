@@ -1,17 +1,12 @@
+
+
 import {recoleta_regular, inconsolata} from "@/fonts/fonts";
-
-
-
 
 
 function Signup(){ 
     
     
-    
-    
-    
-    
-    
+
     
     
     
@@ -37,8 +32,9 @@ function Signup(){
                 <label htmlFor="signup-name"> your name </label> <br />
                 <input id="signup-name" name="name" type="text" />
              </div> 
-             <div> 
-                <label htmlFor="signup-password"> create password </label> <br />
+             <div>  
+                   <label htmlFor="signup-password"> create password </label> <br />
+                
                 <input id="signup-password" name="password" type="password" />
              </div> 
              <div> 

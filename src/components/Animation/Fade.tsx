@@ -13,13 +13,15 @@ export default function Fade({ children }: { children: React.ReactNode }) {
   const variants = {
       "hidden":{ 
           opacity:0, 
-     
+          y: 10,
      
       },
       "visible": { 
-        opacity:1,
+        opacity:1, 
+        y:0,
+     
         transition: {
-            duration:0.7,
+            duration:0.8,
         }
           
       }, 

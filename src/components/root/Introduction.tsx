@@ -6,7 +6,7 @@ function Introduction(){
     
     
     return(
-        <section id="app-introduction" className={inconsolata.className} >  
+        <section id="app-introduction" className={`${inconsolata.className}`} >  
         
            <h1 className={`header  ${recoleta_regular.className}`} >  
              {" Explore Top Music Powered by your Taste "}
