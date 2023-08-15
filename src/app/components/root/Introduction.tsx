@@ -16,7 +16,7 @@ function Introduction(){
            </p>
            <p className="" > 
               
-              { "Below you can visualise, in real-time, the listening habits & trends of Last.fm's global community. Go Explore."}
+              { "Below you can visualise, in real-time, the listening habits & trends of  global community. Go Explore."}
            </p>  
            
            <div className="underline" >
