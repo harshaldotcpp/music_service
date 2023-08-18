@@ -2,6 +2,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 import Script from "next/script";
 
+import {inconsolata} from "@/fonts/fonts";
+
 
 
 export const metadata: Metadata = { 
@@ -21,10 +23,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
     </head>
       
-     <body id="App" className="" >
-      
+     <body id="App" className={inconsolata.className} > 
+ 
+
         {children}
-        
+     
       </body>
       
 

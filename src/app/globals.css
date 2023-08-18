@@ -5,23 +5,27 @@
 
 :root{
     --app-background-color: white;
-    --app-article-text-color: black;
-    --app-info-text-color: #444444;
+    --app-text-color: #444444;
+    --alert-box-text-color:#D3D3D3;
+    --alert-box-background-color: black;
 }
 
 
 
 *{
-    /* universal */
+    /* apply to all */
     
 }
+
+
+
 
 #App{
     
     min-height: 100vh;
     max-width: 100vw;
     background-color: var(--app-background-color);
-    color: var(--app-info-text-color);
+    color: var(--app-text-color);
     
 }
 

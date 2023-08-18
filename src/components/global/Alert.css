@@ -1,0 +1,12 @@
+#alert-box{
+    background-color: var(--alert-box-background-color);
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    color: var(--alert-box-text-color);
+}
+
+#alert-box span{
+    text-align: center;
+    margin: 1rem;
+}

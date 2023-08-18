@@ -1,6 +1,8 @@
 'use client'
-import {recoleta_regular, inconsolata} from "@/fonts/fonts";
+import {recoleta_regular} from "@/fonts/fonts";
 import {useState, FormEvent, ChangeEvent} from "react";
+import {useAlertBoxContext} from "@/contexts/AlertContext";
+
 
 
 
@@ -10,21 +12,26 @@ function Signin(){
         password: "",
         
     }
+    const { alertUser } = useAlertBoxContext();
     const [signinData,setSigninData]  = useState(initial_signin_data);
    
     
-    function handleSubmit(event: FormEvent<HTMLFormEvent>){
-        event.preventDefault();
+    function handleSubmit(event: FormEvent<HTMLFormElement>){
+        event.preventDefault(); 
+        alertUser("service unavailable");
     }
     
     function handleOnChange(event: ChangeEvent<HTMLInputElement>){
         const name = event.target.name;
+        
         setSigninData(prevData =>{
             return {
                 ...prevData,
                 [name]: event.target.value,
             };
         });
+        
+     
     } 
     
     
@@ -32,7 +39,7 @@ function Signin(){
     
     
     return(
-        <section id="signin" className={`${inconsolata.className}`} > 
+        <section id="signin" className="" > 
            <div className="text-center text-3xl" >
               <a href="#app-introduction">
                  ↑

@@ -8,7 +8,7 @@ export default function Fade({ children }: { children: React.ReactNode }) {
   
   const ref = useRef(null);
   const isInView = useInView(ref,{once:false});
-  const Animationcontrols = useAnimation();
+  const mainControls = useAnimation();
  
   const variants = {
       "hidden":{ 
@@ -28,24 +28,22 @@ export default function Fade({ children }: { children: React.ReactNode }) {
             
     }
   useEffect(()=>{
-      
       if(isInView){
-         Animationcontrols.start("visible");
-      
+         mainControls.start("visible");
       }
       else{ 
-         Animationcontrols.start("hidden"); 
+         mainControls.start("hidden"); 
       }
       
-  },[isInView,]);
+  },[isInView]);
+
   
   return (
        <main ref={ref} >
         <motion.main
             variants={variants}
             initial="hidden"
-            animate={Animationcontrols}
-           
+            animate={mainControls}
         >
             {children}
         </motion.main>

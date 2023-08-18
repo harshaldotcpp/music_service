@@ -1,4 +1,4 @@
-import {recoleta_regular, inconsolata} from "@/fonts/fonts";
+import {recoleta_regular} from "@/fonts/fonts";
 
 
 
@@ -7,7 +7,7 @@ function Introduction(){
     
     
     return(
-        <section id="app-introduction" className={`${inconsolata.className}`} >  
+        <section id="app-introduction" className="" >  
         
            <h1 className={`header ${recoleta_regular.className}`} >  
              {" Explore Top Music Powered by your Listening habits"}

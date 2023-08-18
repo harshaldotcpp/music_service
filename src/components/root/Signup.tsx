@@ -1,25 +1,30 @@
+"use client"
 
-
-import {recoleta_regular, inconsolata} from "@/fonts/fonts";
+import {recoleta_regular} from "@/fonts/fonts";
+import {FormEvent} from "react"; 
+import {useAlertBoxContext} from "@/contexts/AlertContext";
 
 
 function Signup(){ 
     
     
-
+    const { alertUser } = useAlertBoxContext();
     
-    
+    function handleOnSubmit(event:FormEvent<HTMLFormElement>){
+        event.preventDefault(); 
+        alertUser("service unavailable (in development) ");
+    }
     
     
     return(
-        <section className={`${inconsolata.className}`} id="signup" >
+        <section  className="" id="signup" >
           
            <h1 className={`header ${recoleta_regular.className}`} >
             Sign up
           </h1> 
           <p> Join the music exploration! Sign up now to discover, share, and groove with us </p>
           
-          <div className="form" >  
+          <form onSubmit={handleOnSubmit} className="form" >  
              <div className="entry"> 
                 <label htmlFor="signup-email"> enter email </label> <br />
                 <input id="signup-email" name="email" type="email" />
@@ -44,7 +49,7 @@ function Signup(){
              <div className="entry" > 
                 <button> sign up </button> 
              </div>
-          </div> 
+          </form> 
           
           <div className="underline" >
             <a  href="#signin"> Dont Have An Account?? </a>
