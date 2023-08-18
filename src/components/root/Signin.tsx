@@ -1,10 +1,36 @@
-
+'use client'
 import {recoleta_regular, inconsolata} from "@/fonts/fonts";
+import {useState, FormEvent, ChangeEvent} from "react";
+
 
 
 function Signin(){ 
+    const initial_signin_data = {
+        usernameOrEmail: "",
+        password: "",
+        
+    }
+    const [signinData,setSigninData]  = useState(initial_signin_data);
+   
     
-  
+    function handleSubmit(event: FormEvent<HTMLFormEvent>){
+        event.preventDefault();
+    }
+    
+    function handleOnChange(event: ChangeEvent<HTMLInputElement>){
+        const name = event.target.name;
+        setSigninData(prevData =>{
+            return {
+                ...prevData,
+                [name]: event.target.value,
+            };
+        });
+    } 
+    
+    
+    
+    
+    
     return(
         <section id="signin" className={`${inconsolata.className}`} > 
            <div className="text-center text-3xl" >
@@ -20,20 +46,22 @@ function Signin(){
             {" Welcome back! Your musical journey continues here. Let's explore, discover, and groove together once again. 🎶 "}
             </p>
            
-            <div className="form" > 
-                 <div> 
+            <form onSubmit={handleSubmit} className="form" > 
+            
+                 <div className="entry"> 
                     <label htmlFor="signin-username" > username or email </label> <br/>
-                    <input id="signin-username" name="usernameOrpassword" type="text" /> 
+                    <input onChange={handleOnChange} id="signin-username" name="usernameOrEmail" type="text" /> 
                  </div> 
-                 <div>  
+                 <div className="entry">  
                      <label htmlFor="signin-password" > password </label>  <br />
-                    <input id="signin-password" name="password" type="password" />
+                    <input onChange={handleOnChange} id="signin-password" name="password" type="password" />
                  </div> 
-                 <div> 
-                    <button> sign in </button> 
-                 </div>
-            </div>
-         
+                 <div className="entry"> 
+                    <button > sign in </button> 
+                 </div> 
+                 
+            </form>
+          
           <div> Dont Have Account?{" "}
            <a className="underline" href="#signup">sign up
            </a>

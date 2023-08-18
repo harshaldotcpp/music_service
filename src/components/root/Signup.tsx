@@ -20,28 +20,28 @@ function Signup(){
           <p> Join the music exploration! Sign up now to discover, share, and groove with us </p>
           
           <div className="form" >  
-             <div> 
+             <div className="entry"> 
                 <label htmlFor="signup-email"> enter email </label> <br />
                 <input id="signup-email" name="email" type="email" />
              </div>
-             <div> 
+             <div className="entry"> 
                 <label htmlFor="signup-username"> create username </label> <br />
                 <input id="signup-username" name="username" type="text" />
              </div> 
-             <div> 
+             <div className="entry" > 
                 <label htmlFor="signup-name"> your name </label> <br />
                 <input id="signup-name" name="name" type="text" />
              </div> 
-             <div>  
+             <div className="entry" >  
                    <label htmlFor="signup-password"> create password </label> <br />
                 
                 <input id="signup-password" name="password" type="password" />
              </div> 
-             <div> 
+             <div className="entry" > 
                 <label htmlFor="signup-confirm-password"> confirm password </label> <br />
                 <input id="signup-confirm-password" name="confrim-password" type="password" />
              </div> 
-             <div> 
+             <div className="entry" > 
                 <button> sign up </button> 
              </div>
           </div> 

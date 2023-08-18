@@ -12,7 +12,7 @@ export default function Entry() {
    
    
   return (
-     <main id="entry-page"> 
+     <main id="landing-page"> 
      
        <Fade>
         <Introduction />

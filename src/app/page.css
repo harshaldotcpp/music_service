@@ -1,19 +1,32 @@
-#entry-page{
+#landing-page{
+  /* landing page structure 
+  
+    introducton
+    sign in
+    sign up
+
+  */
     overflow: hidden; 
     display: flex; 
     flex-direction: column;
-    gap:10px;
+    gap: 20rem;
     height: 100vh;
 }
 
-/* css for introduction, signin, and signup wrapper */
+
+/* 
+css for introduction, 
+signin, and signup wrapper 
+
+*/
 section{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 2rem 1rem;
-    height: 100vh;
+    padding: 2.6rem 1.8rem;
+    min-height: 100vh;
     line-height: normal;
+ 
 } 
 
 
@@ -22,7 +35,7 @@ input {
     padding: 0.2rem 0.5rem;
 } 
 
-.form div :not(:first-child){
+.form .entry :not(:first-child){
     margin: 0.5rem 0rem;
 }
 
