@@ -2,7 +2,7 @@
 import {recoleta_regular} from "@/fonts/fonts";
 import {useState, FormEvent, ChangeEvent} from "react";
 import {useAlertBoxContext} from "@/contexts/AlertContext";
-
+import SigninButton from "./SigninButton";
 
 
 
@@ -19,6 +19,7 @@ function Signin(){
     function handleSubmit(event: FormEvent<HTMLFormElement>){
         event.preventDefault(); 
         alertUser("service unavailable");
+      
     }
     
     function handleOnChange(event: ChangeEvent<HTMLInputElement>){
@@ -38,8 +39,9 @@ function Signin(){
     
     
     
-    return(
-        <section id="signin" className="" > 
+    return( 
+        
+        <section  id="signin" className="" > 
            <div className="text-center text-3xl" >
               <a href="#app-introduction">
                  ↑
@@ -63,9 +65,7 @@ function Signin(){
                      <label htmlFor="signin-password" > password </label>  <br />
                     <input onChange={handleOnChange} id="signin-password" name="password" type="password" />
                  </div> 
-                 <div className="entry"> 
-                    <button > sign in </button> 
-                 </div> 
+                 <SigninButton  />
                  
             </form>
           

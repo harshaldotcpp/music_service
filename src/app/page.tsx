@@ -1,5 +1,4 @@
 /* This page/component is sign in and sign up page*/
-'use client'
 import "./page.css"; 
 import Introduction from "@/components/root/Introduction";
 import Signin from "@/components/root/Signin";
@@ -14,7 +13,8 @@ export default function Entry() {
    
    
   return (
-     <AlertContextProvider> 
+    
+     <AlertContextProvider >
      <Alert />
      <main id="landing-page"> 
        <Fade>
@@ -28,7 +28,9 @@ export default function Entry() {
        <Fade>
         <Signup />
        </Fade>
-     </main>
-      </AlertContextProvider>
+     </main> 
+     </AlertContextProvider >
+    
+      
   )     
 }
