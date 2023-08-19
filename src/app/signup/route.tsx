@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation'
 
-export default async function signin(){
+export function GET(){
     return redirect("/#signup")
 }
