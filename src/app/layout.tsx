@@ -15,7 +15,11 @@ export const metadata: Metadata = {
 }
 
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout(props: { 
+    home: React.ReactNode,
+    landing: React.ReactNode
+}) { 
+    const isAuth = false;
   return (
     <html lang="en"> 
     
@@ -26,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      <body id="App" className={inconsolata.className} > 
  
 
-        {children}
+        { isAuth ? props.home : props.landing }
      
       </body>
       

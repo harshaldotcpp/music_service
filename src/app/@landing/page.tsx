@@ -1,5 +1,5 @@
 /* This page/component is sign in and sign up page*/
-import "./page.css"; 
+import "../page.css"; 
 import Introduction from "@/components/root/Introduction";
 import Signin from "@/components/root/Signin";
 import Signup from "@/components/root/Signup";
