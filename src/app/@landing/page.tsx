@@ -16,7 +16,7 @@ export default function Entry() {
     
      <AlertContextProvider >
      <Alert />
-     <main id="landing-page"> 
+     <main id="welcome"> 
        <Fade>
         <Introduction />
        </Fade>
