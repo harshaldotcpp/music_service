@@ -4,7 +4,7 @@ import "./page.css";
 import Introduction from "@/components/root/Introduction";
 import Signin from "@/components/root/Signin";
 import Signup from "@/components/root/Signup";
-import Fade from "@/components/Animation/Fade"
+import Fade from "@/components/animation/Fade"
 import { AlertContextProvider } from "@/contexts/AlertContext";
 import Alert from "@/components/global/Alert";
 
