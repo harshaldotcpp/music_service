@@ -1,12 +1,9 @@
 /* This page/component is sign in and sign up page*/
-import "../page.css"; 
-import Introduction from "@/components/root/Introduction";
-import Signin from "@/components/root/Signin";
-import Signup from "@/components/root/Signup";
+import "./page.css"; 
+import Introduction from "./components/Introduction";
+import Signin from "./components/Signin";
+import Signup from "./components/Signup";
 import Fade from "@/components/animation/Fade"
-import { AlertContextProvider } from "@/contexts/AlertContext";
-import Alert from "@/components/global/Alert";
-
 
 export default function Entry() { 
    
@@ -14,8 +11,6 @@ export default function Entry() {
    
   return (
     
-     <AlertContextProvider >
-     <Alert />
      <main id="landing-page"> 
        <Fade>
         <Introduction />
@@ -29,8 +24,6 @@ export default function Entry() {
         <Signup />
        </Fade>
      </main> 
-     </AlertContextProvider >
-    
       
   )     
 }

@@ -18,6 +18,7 @@ function Alert(){
     const variant = {
         hidden: {
             height: 0,
+      
         },
         visible:{
             height: "auto",
@@ -26,9 +27,9 @@ function Alert(){
     
     useEffect(()=>{
        if(!hide){
-            setTimeout(()=>{
+           setTimeout(()=>{
                 setHide(true);
-            },2500);
+            },1200);
        }
       
     },[hide]);
