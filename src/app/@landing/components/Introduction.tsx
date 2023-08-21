@@ -1,11 +1,10 @@
 import {recoleta_regular} from "@/fonts/fonts";
-
+import db from "@/lib/db";
 
 
 function Introduction(){ 
     
-    
-    
+   
     return(
         <section id="welcome" className="" >  
         
