@@ -17,4 +17,4 @@ validate = {
     username: username,
     email: email,
 }
-export default 
+export default validate;
