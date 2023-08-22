@@ -17,4 +17,3 @@ validate = {
     username: username,
     email: email,
 }
-export default 
