@@ -1,19 +1,11 @@
+function validatePassword(password: string) {}
 
-function validatePassword(password:string){
-    
-}
+function validateEmail(password: string) {}
 
-function validateEmail(password:string){
-    
-}
-
-
-function validateUsername(username){
-    
-}
+function validateUsername(username) {}
 
 validate = {
-    password: validatePassword,
-    username: username,
-    email: email,
-}
+  password: validatePassword,
+  username: username,
+  email: email,
+};
