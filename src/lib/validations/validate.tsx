@@ -2,10 +2,10 @@ function validatePassword(password: string) {}
 
 function validateEmail(password: string) {}
 
-function validateUsername(username) {}
+function validateUsername(username: string) {}
 
-validate = {
+const validate = {
   password: validatePassword,
-  username: username,
-  email: email,
+  username: validateUsername,
+  email: validateEmail,
 };
