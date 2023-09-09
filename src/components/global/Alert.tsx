@@ -1,50 +1,45 @@
-"use client"
-
+"use client";
 
 import "@/components/global/Alert.css";
-import { useState,useEffect} from "react";
+import { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
-import {useAlertBoxContext} from "@/contexts/AlertContext";
+import { useAlertBoxContext } from "@/contexts/AlertContext";
 
+function Alert() {
+    const { message, setHide, hide } = useAlertBoxContext();
 
-
-
-function Alert(){ 
-    
-    const { message,setHide,hide } = useAlertBoxContext();
- 
-    
     const variant = {
         hidden: {
             height: 0,
-      
         },
-        visible:{
+        visible: {
             height: "auto",
         },
-    }
-    
-    useEffect(()=>{
-       if(!hide){
-           setTimeout(()=>{
-                setHide(true);
-            },1200);
-       }
-      
-    },[hide]);
-    
-   
-    return( 
-       <div>
-        <motion.div id="alert-box" className="" variants={variant} initial={"hidden"} animate={hide?"hidden":"visible"}  >
-            <span> {message} </span>
-        </motion.div>
+    };
 
-    
-    
-      </div>
+    useEffect(() => {
+        if (!hide) {
+            setTimeout(() => {
+                setHide(true);
+            }, 1200);
+        }
+    }, [hide]);
+
+    return (
+        <div>
+            <motion.div
+                id="alert-box"
+                className=""
+                variants={variant}
+                initial={"hidden"}
+                animate={hide ? "hidden" : "visible"}
+            >
+                <span> {message} </span>
+            </motion.div>
+        </div>
     );
 }
 
 export default Alert;
+
