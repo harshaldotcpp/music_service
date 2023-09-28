@@ -35,7 +35,7 @@ input {
     padding: 0.2rem 0.5rem;
 } 
 
-.form .entry :not(:first-child){
+.form .entry :not(:first-child,.usernameNote){
     margin: 0.5rem 0rem;
 }
 
@@ -57,9 +57,10 @@ button{
         width: 30rem;
         text-align: center;
     }
-    .form{
+    .form,input{
         text-align: center;
     }
+    
 }
 
 
