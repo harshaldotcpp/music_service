@@ -6,6 +6,7 @@ import { useAlertBoxContext } from "@/contexts/AlertContext";
 import { useState } from "react";
 import { validateSignupForm } from "@/lib/validations/validate";
 import { motion } from "framer-motion";
+import { Oval } from "react-loader-spinner";
 
 function Signup() {
     const initialFormData = {
@@ -20,6 +21,7 @@ function Signup() {
     const [formData, setFormData] = useState(initialFormData);
     const [passwordMatch, setPasswordMatch] = useState(false);
     const [showUsernameNote, setShowUsernameNote] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     async function handleOnSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -28,6 +30,7 @@ function Signup() {
             alertUser(validate.message);
             return;
         }
+        setLoading(true);
         const response = await fetch("/api/signup/", {
             method: "POST",
             headers: {
@@ -38,6 +41,7 @@ function Signup() {
         });
         const responseData = await response.json();
         alertUser(responseData.message);
+        setLoading(false);
     }
 
     function handleOnChange(event: ChangeEvent<HTMLInputElement>) {
@@ -157,7 +161,17 @@ function Signup() {
                     />
                 </div>
                 <div className="entry">
-                    <motion.button> sign up </motion.button>
+                    <div className="flex gap-3 items-center">
+                        <motion.button> sign up </motion.button>
+                        <Oval
+                            color={"#000000"}
+                            secondaryColor={"#D3D3D3"}
+                            height={20}
+                            width={20} 
+                            strokeWidth={7}
+                            visible={loading}
+                        />
+                    </div>
                 </div>
             </form>
 

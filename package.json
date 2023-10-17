@@ -1,17 +1,17 @@
 {
   "name": "music_service",
   "version": "0.1.0",
-  "private": true, 
-  "scripts": { 
-    "makemigrations":"drizzle-kit generate:pg",
+  "private": true,
+  "scripts": {
+    "makemigrations": "drizzle-kit generate:pg",
     "migrate": "ts-node ./src/.drizzle/migrate.ts",
-    "push-schema":"drizzle-kit push:pg",
+    "push-schema": "drizzle-kit push:pg",
     "delete-all-migrations": "rm -r ./src/.drizzle/migrations/*",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
-  }, 
+  },
   "dependencies": {
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
@@ -22,11 +22,12 @@
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.13",
     "framer-motion": "^10.15.2",
-    "next": "13.4.13",
+    "next": "^13.5.4",
     "postcss": "8.4.27",
     "postgres": "^3.3.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-loader-spinner": "^5.4.5",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   },
